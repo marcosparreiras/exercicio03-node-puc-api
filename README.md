@@ -54,4 +54,4 @@ Os endpoints abaixo são restritos a usuários autentificados.
 
 ## Deploy
 
-[Não disponível ainda](#)
+[https://exercicio03-node-puc-api.onrender.com/](https://exercicio03-node-puc-api.onrender.com/)
