@@ -35,7 +35,7 @@ class UsersControllers {
       expiresIn: "24h",
     });
 
-    return res.status(200).json({ token });
+    return res.status(200).json({ token, user });
   }
 }
 
