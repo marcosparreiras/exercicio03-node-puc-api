@@ -6,8 +6,12 @@ function ensureAuth(req, _res, next) {
   if (!token) {
     throw new AppError("Not authorized");
   }
-  const data = jwt.verify(token, process.env.JWT_SECRET);
-  req.userId = data.userId;
+  try {
+    const data = jwt.verify(token, process.env.JWT_SECRET);
+    req.userId = data.userId;
+  } catch (error) {
+    throw new AppError("Invalid Token");
+  }
   next();
 }
 
