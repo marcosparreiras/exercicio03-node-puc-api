@@ -49,6 +49,7 @@ describe("Users routes", () => {
     expect(response.statusCode).toEqual(200);
     expect(response.body).toEqual({
       token: expect.any(String),
+      user: expect.any(Object),
     });
   });
 });
