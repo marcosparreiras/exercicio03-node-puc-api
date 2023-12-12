@@ -4,6 +4,10 @@ const request = require("supertest");
 const kenx = require("../src/libs/knex");
 
 describe("Users routes", () => {
+  beforeAll(() => {
+    process.env.JWT_SECRET = "default";
+  });
+
   beforeEach(() => {
     execSync("npx knex migrate:rollback --all");
     execSync("npx knex migrate:latest");
